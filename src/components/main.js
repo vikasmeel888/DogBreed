@@ -1,63 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <style>
-      body{
-  margin: 0;
-  font-family: sans-serif;
-}
-
-.app {
-  height: 700px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.header {
-  text-align: center;
-  padding: 20px 0;
-}
-
-.header h1 {
-  margin: 0 0 10px 0;
-}
-.header select {
-  font-size: 1rem;
-}
-
-.slideshow{
-  flex: 1;
-  background-color: grey;
-  position: relative;
-  overflow: hidden;
-}
-.slide {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center center;
-  opacity: 0;
-  transform: scale(1);
-  transition: all .9s ease-out;
-}
-
-.slide:nth-last-child(2){
-  opacity: 1;
-  transform: scale(1.08);
-}
-    </style>
-    <script>
-      let timer
+import './App.css';
+import './index.css';
+let timer
 let deleteFirstPhotoDelay
 async function start() { 
    try{
@@ -124,20 +67,3 @@ function createSlideshow(images){
    }
 
 }
-
-    </script>
-    <div id="root"></div>
-    <div class="app">
-      <div class="header">
-          <h1>The Dog</h1>
-          <div id="breed"></div>
-      </div>
-      <div class="slideshow" id="slideshow">
-          
-      </div>
-      
-    </div>
-    
-    
-  </body>
-</html>
